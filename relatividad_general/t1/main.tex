@@ -1,0 +1,88 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Taller \#1 Relatividad General}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+
+Sean dos eventos $P_1$ y $P_2$ con coordenadas espacio-temporales en un sistema inercial $\Sigma$ dadas por
+\[
+P_1 = (x_1^0, x_1^1, x_1^2, x_1^3), \quad P_2 = (x_2^0, x_2^1, x_2^2, x_2^3),
+\]
+y definamos el intervalo espacio-temporal como:
+\[
+\Delta S_{12}^2 = c^2(t_2 - t_1)^2 - (\vb{x}_2 - \vb{x}_1)^2.
+\]
+Estudiaremos tres casos distintos según el signo de $\Delta S_{12}^2$.
+
+\textbf{a)} Intervalo tipo tiempo: $\Delta S_{12}^2 > 0$
+
+En este caso, el intervalo es tipo tiempo, lo que significa que los dos eventos pueden estar conectados causalmente y existe un sistema de referencia $\Sigma_P$ en el cual los dos eventos ocurren en el mismo lugar del espacio. Es decir, $\vb{x}_1 = \vb{x}_2$ en dicho sistema, por lo que:
+
+\[
+\Delta S_{12}^2 = c^2 \Delta \tau^2,
+\]
+donde $\Delta \tau$ es el \textbf{intervalo de tiempo propio} medido en el sistema $\Sigma_P$.
+
+Dado que $t_2 > t_1$ en el sistema $\Sigma$, entonces:
+\[
+\Delta t = t_2 - t_1 = \gamma(v) \Delta \tau > 0 \Rightarrow \Delta \tau > 0,
+\]
+lo que implica que todos los observadores inerciales relacionados por transformaciones de Lorentz (TL) también observarán que $t'_2 > t'_1$. Por tanto, \textbf{el orden temporal de los eventos es invariante relativista}.
+
+Este caso también está asociado con el fenómeno de dilatación temporal:
+\[
+\Delta t = \frac{\Delta \tau}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma(v)\Delta \tau.
+\]
+
+\textbf{b)} Intervalo tipo luz: $\Delta S_{12}^2 = 0$
+
+Aquí, el intervalo es nulo, y los eventos están conectados por una señal luminosa o por una partícula que viaja a la velocidad de la luz. Entonces:
+\[
+c^2(t_2 - t_1)^2 = (\vb{x}_2 - \vb{x}_1)^2 \Rightarrow \Delta S^2 = 0.
+\]
+En este caso, el intervalo es invariante bajo transformaciones de Lorentz. Si en el sistema $\Sigma$ se cumple que $t_2 > t_1$, entonces para cualquier otro sistema inercial $\Sigma'$ también se tendrá $t'_2 > t'_1$. Por tanto, \textbf{el orden temporal de los eventos también es invariante}.
+
+\textbf{c)} Intervalo tipo espacio: $\Delta S_{12}^2 < 0$
+
+Este tipo de intervalo indica que los eventos están separados más en espacio que en tiempo, es decir, no hay una conexión causal entre ellos. En este caso:
+\[
+\Delta S_{12}^2 < 0 \Rightarrow c^2(t_2 - t_1)^2 < (\vb{x}_2 - \vb{x}_1)^2.
+\]
+
+Esto implica que \textbf{existe un sistema de referencia} $\Sigma'$ en el cual ambos eventos son simultáneos ($t'_2 = t'_1$). Además, también existen sistemas donde el orden temporal se invierte ($t'_2 < t'_1$). Esto ocurre porque la simultaneidad no es absoluta en relatividad especial. Por tanto, \textbf{el orden temporal de eventos con intervalo tipo espacio no es un invariante relativista}.
+
+Este hecho refleja la imposibilidad de que eventos separados por un intervalo tipo espacio tengan una relación causal, ya que requeriría una velocidad de propagación mayor a $c$.
+
+\end{document}
