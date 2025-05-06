@@ -1,0 +1,263 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section*{Problema 1.1: Disco compacto (CD)}
+
+\subsection*{(a) Rapidez angular del disco}
+
+La rapidez tangencial es constante y vale:
+\[
+v = 1.3 \, \si{m/s}
+\]
+
+Para encontrar la rapidez angular usamos:
+\[
+\omega = \frac{v}{r}
+\]
+
+Para $r = 23 \, \si{mm} = 0.023 \, \si{m}$:
+\[
+\omega_\text{interna} = \frac{1.3}{0.023} \approx 56.52 \, \si{rad/s}
+\]
+
+Para $r = 58 \, \si{mm} = 0.058 \, \si{m}$:
+\[
+\omega_\text{externa} = \frac{1.3}{0.058} \approx 22.41 \, \si{rad/s}
+\]
+
+Convirtiendo a revoluciones por minuto (rpm):
+\[
+\text{rpm} = \frac{\omega \cdot 60}{2\pi}
+\]
+
+\[
+\omega_\text{interna} \approx \frac{56.52 \cdot 60}{2\pi} \approx 539.5 \, \si{rpm}
+\]
+\[
+\omega_\text{externa} \approx \frac{22.41 \cdot 60}{2\pi} \approx 213.9 \, \si{rpm}
+\]
+
+\subsection*{(b) Número de revoluciones}
+
+Tiempo total: 
+\[
+t = 74 \times 60 + 33 = 4473 \, \si{s}
+\]
+
+Suponiendo una variación lineal de la velocidad angular, el número de vueltas se calcula con:
+\[
+N = \frac{1}{2}(\omega_i + \omega_f) \cdot \frac{t}{2\pi}
+\]
+
+\[
+N = \frac{1}{2}(56.52 + 22.41) \cdot \frac{4473}{2\pi} \approx 22.87 \cdot \frac{4473}{2\pi} \approx 16269 \, \text{revoluciones}
+\]
+
+\subsection*{(c) Aceleración angular}
+
+\[
+\alpha = \frac{\omega_f - \omega_i}{t} = \frac{22.41 - 56.52}{4473} \approx -0.00763 \, \si{rad/s^2}
+\]
+
+
+% --- Problema 1.2 ---
+\section*{Problema 1.2: Molécula de oxígeno (O$_2$)}
+
+\begin{enumerate}
+  \item \textbf{Momento de inercia alrededor del eje $z$.}\\
+    Dos átomos de masa $m = 2.66\times10^{-26}\,\si{kg}$ separados por $d = 1.21\times10^{-10}\,\si{m}$ giran en torno a su centro a distancia $r = d/2$ cada uno.  
+    \[
+      I \;=\; 2\,m\,r^2 
+      \;=\; 2\,m\bigl(\tfrac{d}{2}\bigr)^2 
+      \;=\; m\,\frac{d^2}{2}
+      \;=\; (2.66\times10^{-26})\;\frac{(1.21\times10^{-10})^2}{2}
+      \;\approx\;1.95\times10^{-46}\,\si{kg.m^2}.
+    \]
+
+  \item \textbf{Energía cinética rotacional.}\\
+    Para velocidad angular $\omega = 4.60\times10^{12}\,\si{rad/s}$,
+    \[
+      K = \tfrac12\,I\,\omega^2 
+      = \tfrac12\,(1.95\times10^{-46})\,(4.60\times10^{12})^2 
+      \approx 2.06\times10^{-21}\,\si{J}.
+    \]
+\end{enumerate}
+
+% --- Problema 1.3 ---
+\section*{Problema 1.3: Formación de una estrella de neutrones}
+
+Una estrella de radio inicial $R_i=1.0\times10^4\,\si{km}=1.0\times10^7\,\si{m}$ gira con periodo $T_i=30\,\mathrm{d}=30\cdot86400\,\si{s}=2.592\times10^6\,\si{s}$. Tras la supernova colapsa a radio $R_f=3.0\,\si{km}=3.0\times10^3\,\si{m}$.  
+
+Asumiendo que se conserva el momento angular y que la estrella es aproximadamente una esfera homogénea ($I\propto R^2$),
+\[
+  T_f = T_i \bigl(\tfrac{R_f}{R_i}\bigr)^2
+  = (2.592\times10^6)\,\bigl(\tfrac{3.0\times10^3}{1.0\times10^7}\bigr)^2
+  \approx 0.23\,\si{s}.
+\]
+
+
+% === Problema 1.4 ===
+\section*{Problema 1.4: Estado de tensión}
+
+El tensor de tensiones se denota genéricamente por \(T=T_{ij}(x,y,z)\). Aplicamos las ecuaciones de equilibrio estático (ecuaciones de Cauchy):
+\[
+\pdv{\sigma_{ij}}{x_j} + b_i = 0, \quad i=1,2,3,
+\]
+con \(b = (b_x,b_y,b_z)\) constante.
+
+\begin{enumerate}
+  \item Escribimos para cada componente:
+    \[
+      \frac{\partial T_{i1}}{\partial x} + \frac{\partial T_{i2}}{\partial y}
+      + \frac{\partial T_{i3}}{\partial z} + b_i = 0,
+      \quad i=x,y,z.
+    \]
+    De estas tres ecuaciones se extraen relaciones entre \(A,B,C,D\) y \(b_x,b_y,b_z\).
+
+  \item Resolviendo esas relaciones, se obtienen explícitamente las componentes
+    \[
+      b_x = \dots,\quad b_y = \dots,\quad b_z = \dots
+    \]
+    (dependerán linealmente de \(A,B,C,D\)).
+
+  \item Se verifica sustituyendo de nuevo en las ecuaciones de equilibrio que
+    \(\nabla\cdot T + b = 0\) se cumple identicamente.
+\end{enumerate}
+
+% === Problema 1.5 ===
+\section*{Problema 1.5: Deformaciones combinadas en un cilindro}
+
+\begin{itemize}
+  \item Datos: \(L_0=1.0\,\mathrm{m}\), \(r_0=0.1\,\mathrm{m}\), 
+    \(F=2000\,\mathrm{kN}\), \(P=50\,\mathrm{MPa}\), 
+    \(E=200\,\mathrm{GPa}\), \(K=166.67\,\mathrm{GPa}\).
+\end{itemize}
+
+\begin{enumerate}
+  \item \textbf{Deformación axial \(\epsilon_z\) y \(\Delta L\).}\\
+    \[
+      \epsilon_z = -\frac{F}{A\,E},\quad A=\pi r_0^2,
+      \quad \Delta L = \epsilon_z L_0.
+    \]
+
+  \item \textbf{Deformación volumétrica por presión externa.}\\
+    Para material isótropo:
+    \[
+      \frac{\Delta V}{V_0} = -\frac{P}{K}.
+    \]
+
+  \item \textbf{Contracción radial total \(\Delta r\).}\\
+    Usando coeficiente de Poisson 
+    \(\nu = \tfrac{3K-2E}{2(3K+E)}\), la contracción debida a la carga axial
+    y a la presión externa se suma:
+    \[
+      \Delta r = -\nu\,\epsilon_z\,r_0 - \frac{P\,r_0}{E}(1-\nu).
+    \]
+\end{enumerate}
+
+% === Problema 1.6 ===
+\section*{Problema 1.6: La fosa de las Marianas}
+
+Profundidad \(h=11\,\mathrm{km}\), presión \(P=1.13\times10^8\,\si{N/m^2}\), 
+densidad superficial \(\rho_0=1.03\times10^3\,\si{kg/m^3}\).
+
+\begin{enumerate}
+  \item \(\Delta V\) de \(1\,\mathrm{m^3}\):
+    \[
+      \frac{\Delta V}{V_0} = -\frac{P}{K_\text{agua}},
+      \quad K_\text{agua}\approx 2.2\times10^9\,\si{Pa},
+      \quad \Delta V = V_0\,\frac{\Delta V}{V_0}.
+    \]
+  \item Nueva densidad:
+    \[
+      \rho = \frac{\rho_0 V_0}{V_0 + \Delta V}.
+    \]
+  \item Comentario sobre (in)compresibilidad: el agua es casi incompresible si
+    las variaciones volumétricas son muy pequeñas (\(\Delta V/V_0\ll1\)), 
+    válido en profundidades típicas del océano.
+\end{enumerate}
+
+% === Problema 1.7 ===
+\section*{Problema 1.7: Tensión y trabajo en un alambre}
+
+Longitud \(L\), módulo \(Y\), área \(A\), alargamiento \(\Delta L\).
+
+\begin{enumerate}
+  \item La constante estructural \(k\) surge de
+    \[
+      F = Y \frac{A}{L}\,x \;\Rightarrow\; k = \frac{YA}{L}.
+    \]
+  \item Trabajo al estirar \(\Delta L\):
+    \[
+      W = \int_0^{\Delta L} k\,x\,dx = \tfrac12\,k\,(\Delta L)^2.
+    \]
+\end{enumerate}
+
+% === Problema 1.8 ===
+\section*{Problema 1.8: Huesos de buzos}
+
+Módulo volumétrico \(K=15\,\mathrm{GPa}\).
+
+\begin{enumerate}
+  \item Para \(\Delta V/V = -0.001\),
+    \[
+      \Delta P = K\,\frac{\Delta V}{V} = -15\times10^9\cdot(-10^{-3}) 
+      = 1.5\times10^7\,\mathrm{Pa}
+      \approx 148\,\text{atm}.
+    \]
+  \item A \(1.0\times10^4\,\mathrm{Pa/m}\),
+    \[
+      h = \frac{\Delta P}{1\times10^4} = \frac{1.5\times10^7}{10^4} 
+      = 1.5\times10^3\,\mathrm{m}.
+    \]
+    No es un problema serio, pues rara vez se alcanzan presiones tan altas in situ.
+\end{enumerate}
+
+% === Problema 1.9 ===
+\section*{Problema 1.9: Deformación de una varilla vertical}
+
+Profundidad \(L=180\,\mathrm{m}\), carga \(p=1200\,\mathrm{kgf}\approx1.2\times10^4\,\mathrm{N}\), 
+tensión máxima \(\sigma_\text{max}=1000\,\mathrm{kgf/cm^2}=9.8\times10^7\,\mathrm{Pa}\), 
+\(\rho=7850\,\mathrm{kg/m^3}\).
+
+\begin{enumerate}
+  \item Sección mínima:
+    \[
+      A = \frac{p g}{\sigma_\text{max}}.
+    \]
+  \item Alargamiento total considerando peso propio:
+    \[
+      \Delta L = \int_0^L \frac{\rho g A\,x}{YA}\,dx 
+      = \frac{\rho g}{Y} \frac{L^2}{2}.
+    \]
+\end{enumerate}
+
+% === Problema 1.10 ===
+\section*{Problema 1.10: El tendón de Aquiles}
+
+Masa \(m=75\,\mathrm{kg}\), longitud del tendón \(L=0.25\,\mathrm{m}\), 
+área \(A=78\times10^{-6}\,\mathrm{m^2}\), \(Y=1470\,\mathrm{MPa}\).
+
+\begin{enumerate}
+  \item Diagrama de cuerpo libre: peso \(mg\) hacia abajo, fuerza de reacción del pie, 
+    tensión \(T\) del tendón hacia arriba.
+  \item Equilibrio vertical:
+    \[
+      T = mg \approx 75\cdot9.8 = 735\,\mathrm{N}
+      \quad\text{(}=\!1\,mg\text{)}.
+    \]
+  \item Estiramiento:
+    \[
+      \Delta L = \frac{T}{YA} L
+      = \frac{735}{1.47\times10^9 \cdot 78\times10^{-6}} \cdot 0.25
+      \approx 0.00016\,\mathrm{m} = 0.16\,\mathrm{mm}.
+    \]
+\end{enumerate}
+
+\end{document}

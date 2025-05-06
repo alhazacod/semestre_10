@@ -85,4 +85,506 @@ Esto implica que \textbf{existe un sistema de referencia} $\Sigma'$ en el cual a
 
 Este hecho refleja la imposibilidad de que eventos separados por un intervalo tipo espacio tengan una relación causal, ya que requeriría una velocidad de propagación mayor a $c$.
 
+
+\section{}
+Sea $x(\lambda)$ la línea de universo de una partícula y $\lambda$ un parámetro.
+
+
+\textbf{a) } Cuando $\lambda = \tau$, la cuadrivelocidad está definida como:
+\[
+U^\mu = \dv{x^\mu}{\tau}.
+\]
+
+La cuadria-aceleración es:
+\[
+A^\mu = \dv{U^\mu}{\tau}.
+\]
+
+Bajo la métrica de Minkowski $(+,-,-,-)$, el producto interno se define como:
+\[
+U \cdot A = \eta_{\mu\nu} U^\mu A^\nu = U^0 A^0 - \vb{U} \cdot \vb{A},
+\]
+
+donde $\vb{U}$ y $\vb{A}$ son las partes espaciales de los vectores.
+
+Primero, notamos que:
+\[
+\dv{}{ \tau } (U^\mu U_\mu) = 0,
+\]
+
+Calculando explícitamente:
+\[
+\dv{}{ \tau } (U^\mu U_\mu) = 2 U_\mu \dv{U^\mu}{\tau} = 2 U_\mu A^\mu = 2 (U \cdot A).
+\]
+Por tanto:
+\[
+U \cdot A = 0.
+\]
+
+\begin{itemize}
+    \item La cuadrivelocidad \( U^\mu \) se define como:
+      \[
+      U^\mu = \dv{x^\mu}{\tau}.
+      \]
+
+      Componentes:
+      \[
+      U^\mu = \left( \dv{x^0}{\tau}, \dv{x^1}{\tau}, \dv{x^2}{\tau}, \dv{x^3}{\tau} \right).
+      \]
+
+      El cuadrado de la cuadrivelocidad bajo la métrica de Minkowski \((+,-,-,-)\) es:
+      \[
+      U^2 = \eta_{\mu\nu} U^\mu U^\nu = (U^0)^2 - (U^1)^2 - (U^2)^2 - (U^3)^2.
+      \]
+
+      Ahora, por definición del tiempo propio:
+      \[
+      c^2 \dd{\tau}^2 = c^2 \dd{t}^2 - \dd{x}^2 - \dd{y}^2 - \dd{z}^2,
+      \]
+      lo cual implica:
+      \[
+      \left( \dv{x^0}{\tau} \right)^2 - \left( \dv{x^1}{\tau} \right)^2 - \left( \dv{x^2}{\tau} \right)^2 - \left( \dv{x^3}{\tau} \right)^2 = c^2,
+      \]
+      es decir,
+      \[
+      U^2 = c^2.
+      \]
+
+    \item La cuadriaceleración \( A^\mu \) se define como:
+      \[
+      A^\mu = \dv{U^\mu}{\tau}.
+      \]
+
+      Componentes:
+      \[
+      A^\mu = \left( \dv[2]{x^0}{\tau}, \dv[2]{x^1}{\tau}, \dv[2]{x^2}{\tau}, \dv[2]{x^3}{\tau} \right).
+      \]
+
+      Ahora calculemos explícitamente el producto \( U \cdot A \):
+      \[
+      U \cdot A = \eta_{\mu\nu} U^\mu A^\nu = U^0 A^0 - U^1 A^1 - U^2 A^2 - U^3 A^3.
+      \]
+      El cuadrado de la cuadriaceleración es:
+\[
+A^2 = \eta_{\mu\nu} A^\mu A^\nu = (A^0)^2 - (A^1)^2 - (A^2)^2 - (A^3)^2.
+\]
+
+\( A^\mu \) es ortogonal a \( U^\mu \) y \( A^\mu \) es de tipo espacio, por lo tanto:
+\[
+A^2 < 0.
+\]
+\end{itemize}
+
+
+
+
+
+
+\section{}
+
+\textbf{a) } 
+En \(\Sigma\) el fotón incidente tiene cuatro-vector
+\[
+k^\mu \;=\;\bigl(\tfrac{\omega}{c},\,k_x,\,k_y,\,0\bigr),
+\]
+donde
+\[
+k_x = \frac{\omega}{c}\,\cos\theta_i,
+\qquad
+k_y = \frac{\omega}{c}\,\sin\theta_i,
+\]
+y \(\omega=|\vec k|\,c\).
+El espejo se mueve a \(-v\,\hat x\), así que para ir a su reposo hacemos un \emph{boost} con velocidad \(+\!v\,\hat x\). Llamamos \(\beta=v/c\) y
+\(\gamma=1/\sqrt{1-\beta^2}\). La transformación de Lorentz en la dirección \(x\) es
+\[
+\begin{cases}
+k'^0 = \gamma\,(k^0 - \beta\,k_x),\\[6pt]
+k'_x = \gamma\,(k_x - \beta\,k^0),\\[3pt]
+k'_y = k_y\,,
+\end{cases}
+\]
+con \(k^0=\omega/c\). Por tanto:
+\[
+\omega'\equiv c\,k'^0
+= c\,\gamma\Bigl(\tfrac{\omega}{c}-\beta\,\tfrac{\omega}{c}\cos\theta_i\Bigr)
+=\omega\,\gamma\,(1-\beta\cos\theta_i),
+\]
+y el coseno del ángulo en \(\Sigma'\) es
+\[
+\cos\theta_i'
+=\frac{k'_x}{|\vec k'\,|}
+=\frac{\gamma\bigl(\frac{\omega}{c}\cos\theta_i-\beta\frac{\omega}{c}\bigr)}
+      {\gamma\frac{\omega}{c}(1-\beta\cos\theta_i)}
+=\frac{\cos\theta_i-\beta}{1-\beta\cos\theta_i}.
+\]
+En el marco del espejo, la reflexión especular clásica da
+\[
+\theta_r'=\theta_i',
+\qquad
+\omega'\ \text{(frecuencia)}\ \text{invariante}.
+\]
+Por tanto, el vector reflejado es
+\[
+k_r'{}^\mu
+=\Bigl(\tfrac{\omega'}{c},\,-k'_x,\,k'_y,\,0\Bigr).
+\]
+Ahora aplicamos la transformación inversa (boost de \(-v\hat x\)):
+\[
+\begin{cases}
+k^0_r = \gamma\,(k'^0 + \beta\,k'_x),\\[6pt]
+k_{r x} = \gamma\,(k'_x + \beta\,k'^0),\\[3pt]
+k_{r y} = k'_y.
+\end{cases}
+\]
+Calculamos
+\[
+k_{r x}
+= \gamma\Bigl(-k'_x + \beta\,k'^0\Bigr)
+= \gamma\Bigl[-\gamma\bigl(k_x-\beta k^0\bigr)
+               +\beta\,\gamma\bigl(k^0-\beta k_x\bigr)\Bigr]
+\]
+y de forma análoga para la magnitud $|\vec k_r|$.  
+Tras factorizar se llega a
+\[
+\boxed{
+\cos\theta_r \;=\;
+\frac{2\,\beta \;+\; (1+\beta^2)\,\cos\theta_i}
+     {1 \;+\;2\,\beta\,\cos\theta_i\;+\;\beta^2}
+}
+\quad\bigl(\beta=v/c\bigr),
+\]
+
+
+\textbf{b)} Si \(\vec v\) es paralelo al plano \(yz\), entonces en la TL
+\(\beta\) aparece sólo en las componentes \(y,z\) y \(\hat x\)
+queda sin “mezclarse”. Se sigue que
+\(\cos\theta_i'=\cos\theta_i\) y por simetría de la reflexión
+\(\cos\theta_r'=\cos\theta_i'\). Al regresar a \(\Sigma\)
+quedará \(\cos\theta_r=\cos\theta_i\), luego
+\[
+\theta_r=\theta_i.
+\]
+
+
+
+
+
+
+\section{}
+\[
+f^\mu \;=\;\frac{dp^\mu}{d\tau}
+\;=\;\gamma(\vb u)\,\frac{dp^\mu}{dt},
+\]
+donde
+\[
+p^\mu = m_0\,U^\mu = m_0\,\gamma(\vb u)\,(c,\vb u),
+\quad
+\gamma(\vb u)=\frac1{\sqrt{1-\tfrac{u^2}{c^2}}}.
+\]
+
+
+\textbf{a) } Escribimos
+\[
+p^\mu = \bigl(p^0,\vb p\bigr)
+         = \bigl(m_0\gamma c,\;m_0\gamma\,\vb u\bigr).
+\]
+Entonces
+\[
+\frac{dp^0}{dt}
+= \frac{d}{dt}\bigl(m_0\gamma c\bigr)
+= c\,\frac{d}{dt}\bigl(m_0\gamma\bigr)
+= c\,\frac{dm}{dt},
+\]
+y
+\[
+\frac{d\vb p}{dt} = \vb F.
+\]
+Por tanto,
+\[
+\frac{dp^\mu}{dt}
+= \bigl(c\,\tfrac{dm}{dt},\;\vb F\bigr),
+\]
+y
+\[
+f^\mu
+= \gamma(\vb u)\,\frac{dp^\mu}{dt}
+= \gamma(\vb u)\,
+  \Bigl(c\,\frac{dm}{dt},\;\vb F\Bigr).
+\]
+
+
+\textbf{b) }Usamos el hecho de que la cuadrivelocidad y la cuadriaceleración satisfacen
+\[
+U^\mu A_\mu = 0,
+\quad
+U^\mu = \dv{x^\mu}{\tau}, \quad
+A^\mu = \dv{U^\mu}{\tau}.
+\]
+Y tambien que
+\[
+E = p^0 c = m c^2,
+\]
+de modo que
+\[
+\frac{dE}{dt} = \frac{d}{dt}(mc^2).
+\]
+Por otro lado,
+el trabajo por unidad de tiempo es
+\(\dot W = \vb F\!\cdot\!\vb u\), y en relatividad
+\(\dot W=dE/dt\). Así,
+\[
+\frac{d}{dt}(m c^2)
+= \vb F\!\cdot\!\vb u.
+\]
+
+
+
+\textbf{c) }Si usamos la relación
+\[
+\frac{dE}{dt} \;=\;\vb F\!\cdot\!\vb u
+\;\Longrightarrow\;
+\frac{1}{c}\,\frac{dE}{dt} \;=\;\frac{1}{c}\,\vb F\!\cdot\!\vb u,
+\]
+y recordamos que \(E=c\,p^0\), podemos escribir
+\[
+\frac{dp^0}{dt}
+= \frac{1}{c}\,\frac{dE}{dt}
+= \frac{1}{c}\,\vb F\!\cdot\!\vb u.
+\]
+Entonces
+\[
+\frac{dp^\mu}{dt}
+= \Bigl(\tfrac{1}{c}\,\vb F\!\cdot\!\vb u,\;\vb F\Bigr),
+\]
+y, como antes,
+\[
+f^\mu
+= \gamma(\vb u)\,\frac{dp^\mu}{dt}
+= \gamma(\vb u)\,
+  \Bigl(\tfrac{1}{c}\,\vb F\!\cdot\!\vb u,\;\vb F\Bigr).
+\]
+
+
+
+
+\section{}
+
+\textbf{a) }Escribimos
+\[
+\gamma\,u = \frac{u}{\sqrt{1-u^2/c^2}} = \Phi(t),
+\]
+y la ecuación es \(\dot\Phi = g\). Integrando con \(\Phi(0)=0\):
+\[
+\Phi(t) = g\,t,
+\]
+es decir
+\[
+\frac{u}{\sqrt{1-u^2/c^2}} = g\,t.
+\]
+Elevamos al cuadrado:
+\[
+\frac{u^2}{1-u^2/c^2} = g^2 t^2
+\;\Longrightarrow\;
+u^2 \;=\; \frac{g^2 t^2}{1 + \frac{g^2 t^2}{c^2}}
+\;=\; \frac{(g t)^2}{1 + (g t/c)^2}\,c^2.
+\]
+Por tanto
+\[
+u(t) \;=\; \frac{g\,t}{\sqrt{1 + \bigl(\tfrac{g\,t}{c}\bigr)^2}}\,.
+\]
+
+Usamos
+\(\dot x = u(t)\). Entonces
+\[
+x(t) = \int_0^t \frac{g\,t'}{\sqrt{1 + (g t'/c)^2}}\,dt'.
+\]
+Cambiamos variable \(y = (g t')/c\):
+\[
+x(t) = \frac{c^2}{g}
+\int_0^{gt/c} \frac{y}{\sqrt{1+y^2}}\,dy
+= \frac{c^2}{g}
+\bigl[\sqrt{1+y^2}-1\bigr]_{0}^{gt/c}
+= \frac{c^2}{g}\Bigl(\sqrt{1+(gt/c)^2}-1\Bigr).
+\]
+Así,
+\[
+\boxed{x(t) = \frac{c^2}{g}\Bigl(\sqrt{1+\bigl(\tfrac{g\,t}{c}\bigr)^2}-1\Bigr)\,.}
+\]
+
+
+\textbf{b)}
+Para aceleración propia constante \(g\) es más sencillo usar \(\tau\). Sabemos que
+\[
+t(\tau) = \frac{c}{g}\sinh\Bigl(\frac{g\,\tau}{c}\Bigr),
+\qquad
+x(\tau) = \frac{c^2}{g}\Bigl[\cosh\Bigl(\frac{g\,\tau}{c}\Bigr)-1\Bigr].
+\]
+Estas expresiones satisfacen las condiciones iniciales \(t(0)=0\), \(x(0)=0\) y
+\(\dot x\bigl|_{\tau=0}=0\).  
+
+La cuadrivelocidad es
+\[
+U^\mu = \dv{x^\mu}{\tau}
+= \Bigl(c \cosh\!\tfrac{g\tau}{c},\;
+           c \sinh\!\tfrac{g\tau}{c},\;0,\;0\Bigr).
+\]
+
+
+
+
+
+
+
+
+
+\section{}
+Consideremos una partícula de masa propia \(m_0\) cuya posición respecto a un sistema inercial \(\Sigma\) es \(\vb r(t)\), con velocidad \(\vb u = \dot{\vb r}\). Sobre ella actúa una fuerza central atractiva
+\[
+\vb F(\vb r) \;=\; -\frac{k}{r^3}\,\vb r,
+\qquad r = \|\vb r\|.
+\]
+La fuerza cuatrivectorial es
+\[
+f^\mu \;=\; \dv{p^\mu}{\tau}
+\;=\;\gamma(u)\,\dv{p^\mu}{t},
+\]
+donde
+\[
+p^\mu = m_0\,\gamma(u)\,(c,\;\vb u),
+\qquad
+\gamma(u)=\frac{1}{\sqrt{1-u^2/c^2}}.
+\]
+Denotamos la energía total como
+\[
+E \;=\; \gamma(u)\,m_0\,c^2 \;-\;\frac{k}{r}.
+\]
+
+
+
+\textbf{a) } Queremos mostrar que \(\displaystyle \frac{dE}{dt}=0\). 
+
+1. Transformada temporal de la fuerza:
+\[
+\frac{dp^0}{dt}
+= \frac{1}{c}\,\frac{d}{dt}\bigl(\gamma m_0 c^2\bigr)
+= \frac{1}{c}\,\frac{d}{dt}\bigl(E_{\rm kin}\bigr),
+\]
+pero también de la parte espacial obtenemos la fuerza usual,
+\(\displaystyle \frac{d\vb p}{dt}=\vb F\).
+
+2. Relación trabajo–energía:
+\[
+\frac{d}{dt}\bigl(\gamma m_0 c^2\bigr)
+= \vb F\cdot\vb u,
+\]
+puesto que \(\dot W = \vb F\cdot\vb u\) y \(\dot W = dE_{\rm kin}/dt\).
+
+3. Cálculo de \(\vb F\cdot\vb u\):
+\[
+\vb F\cdot\vb u
+= -\frac{k}{r^3}\,\vb r\cdot\dot{\vb r}
+= -\frac{k}{r^3}\,\frac{d}{dt}\!\Bigl(\tfrac12 r^2\Bigr)
+= -\frac{k}{r^2}\,\frac{dr}{dt}
+= -\frac{d}{dt}\!\Bigl(\frac{k}{r}\Bigr).
+\]
+
+4. Combinando,
+\[
+\frac{dE}{dt}
+= \frac{d}{dt}\Bigl(\gamma m_0 c^2\Bigr)
+  \;-\;\frac{d}{dt}\Bigl(\frac{k}{r}\Bigr)
+= \vb F\cdot\vb u \;-\;\vb F\cdot\vb u
+= 0.
+\]
+
+
+
+\textbf{b) } Definimos el momento angular orbital
+\[
+\vb L = \vb r \times \vb p
+= m_0\,\gamma(u)\,\bigl(\vb r\times\vb u\bigr).
+\]
+Su derivada temporal es
+\[
+\frac{d\vb L}{dt}
+= \dot{\vb r}\times\vb p \;+\;\vb r\times\frac{d\vb p}{dt}
+= \vb u\times\bigl(m_0\gamma\,\vb u\bigr)
+  \;+\;\vb r\times\vb F.
+\]
+Pero \(\vb u\times\vb u = \vb 0\) y
+\[
+\vb r\times\vb F
+= -\frac{k}{r^3}\,\vb r\times\vb r
+= \vb 0.
+\]
+Así,
+\[
+\frac{d\vb L}{dt} = \vb 0,
+\]
+
+
+
+
+
+
+
+
+\setcounter{section}{8}
+\section{}
+
+\begin{enumerate}
+\item[a)] Demostraciones:
+
+\begin{itemize}
+\item[1.] Antisimetría:
+\begin{align*}
+[A,B] &= AB - BA\,,\\
+[B,A] &= BA - AB\,,\\
+\Rightarrow [A,B] &= -[B,A]\,.
+\end{align*}
+
+\item[2.] Linealidad:
+\begin{align*}
+[A,B+C] &= A(B+C) - (B+C)A\\
+&= AB + AC - BA - CA\\
+&= (AB - BA) + (AC - CA)\\
+&= [A,B] + [A,C]\,.
+\end{align*}
+
+\item[3.] Regla del producto:
+\begin{align*}
+[A,BC] &= A(BC) - (BC)A\\
+&= (AB)C - B(CA)\\
+&= (AB)C - B(AC)\\
+&= (AB - BA)C + B(AC - CA)\\
+&= [A,B]C + B[A,C]\,.
+\end{align*}
+
+\item[4.] Comportamiento bajo transposición:
+\begin{align*}
+[A,B]^T &= (AB - BA)^T\\
+&= (AB)^T - (BA)^T\\
+&= B^T A^T - A^T B^T\\
+&= [B^T, A^T]\,.
+\end{align*}
+
+\item[5.] Identidad de Jacobi:
+Expandimos cada término:
+\begin{align*}
+[A,[B,C]] &= A(BC - CB) - (BC - CB)A = ABC - ACB - BCA + CBA\,,\\
+[C,[A,B]] &= C(AB - BA) - (AB - BA)C = CAB - CBA - ABC + BAC\,,\\
+[B,[C,A]] &= B(CA - AC) - (CA - AC)B = BCA - BAC - CAB + ACB\,.
+\end{align*}
+Sumando los tres resultados:
+\begin{align*}
+[A,[B,C]] + [C,[A,B]] + [B,[C,A]] &= (ABC - ACB - BCA + CBA) \\
+&\quad + (CAB - CBA - ABC + BAC) \\
+&\quad + (BCA - BAC - CAB + ACB)\\
+&= 0\,,
+\end{align*}
+ya que todos los términos se cancelan par a par.
+\end{itemize}
+\end{enumerate}
+
+
 \end{document}
